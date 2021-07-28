@@ -14,7 +14,7 @@ node {
      }
     stage('Build') {
       // Run the maven build
-      sh 'mvn -f ./ht-core-framework/pom.xml -gs /var/jenkins_home/settings.xml clean package -DskipTests'
+      sh 'mvn -f ./test/pom.xml -gs /var/jenkins_home/settings.xml clean package -DskipTests'
     }
     stage('Results') {
       // junit 'ht-core-framework/target/surefire-reports/TEST-*.xml'
@@ -23,7 +23,7 @@ node {
     stage('Build docker image') {
         dir('./Docker') {
             // using docker plugin
-            app = docker.build("hdservicedocker/ht-core-framework")
+            app = docker.build("testhub/test")
         }
     }
     stage('Push docker image') {
