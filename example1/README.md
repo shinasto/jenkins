@@ -1,9 +1,12 @@
 
 작업 흐름
-Jenkins서버 ---> terminal Instance  ---> Server Instance 1
-                                   ---> Server Instance 2
-                                   ...
-                                   ---> Server Instance N
+
+|Jenkins서버 |---> |terminal Instance| --->|Server Instance 1|
+|--|--|--|--|--|
+|           |     |                 | --->|Server Instance 2|
+|           |     |                 | --->|Server Instance N|
+        
+                        
                                  
 
 * ci_s3_deploy.sh
