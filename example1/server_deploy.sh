@@ -9,7 +9,7 @@ C2C_JAR_NAME="server-*.jar"
 cd $WORK_DIR/
 
 C2C_JAR_FILE_NAME=`ls ${C2C_JAR_NAME} | tail -1`
-C2C_SCRIPT_FILE="server_script.sh"
+C2C_SCRIPT_FILE="server_start.sh"
 
 echo "Source file=${C2C_JAR_FILE_NAME}"
 echo "Source path=${SOURCE}"
